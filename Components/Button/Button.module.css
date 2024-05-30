@@ -1,0 +1,32 @@
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+    width: 7rem;
+    padding: 0.2rem;
+    border-radius: 1.5rem;
+    background: rgb(250, 102, 43);
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    margin-top: 1rem;
+}
+.button:hover::before{
+    transform: scaleX(1);
+}
+.button_content{
+    position: relative;
+    z-index: 1;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    transition: all 0.475s;
+}

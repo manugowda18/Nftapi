@@ -1,7 +1,17 @@
 import React from "react";
 
-const Notification = () => {
-  return <div>Notification</div>;
+import Style from "./Notification.module.css";
+
+const Notification = ({ setNotification, notification }) => {
+  return (
+    <div
+      onClick={() => setNotification("")}
+      class={Style.alert}
+    >
+      {notification}Notification
+      <span>&times;</span>
+    </div>
+  );
 };
 
 export default Notification;

@@ -1,0 +1,40 @@
+.material_checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #777777;
+    cursor: pointer;
+}
+.material_checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.checkmark{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.material_checkbox input[type="checkbox"]:checked ~ .checkmark{
+    background-color: #777777;
+    border-color: rgba(92, 80, 11, 0.73);
+}
+
+.material_checkbox input[type="checkbox"]:checked ~ .checkmark:after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid #f89b29;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
